@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Yusuf">
+    <meta name="description" content="Little Lemon Resturant blog">
+    <meta name="language" content="english">
+    <meta property="og:title" content="Our Menu">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="images/logo.png">
+    <meta property="og:url" content="https://littlelemon">
+    <meta property="og:description" content="Little Lemon is traditional Mediterranean Restaurant">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:site_name" content="Little Lemon">
+
+    <title>Little Lemon</title>
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+<body>
+    <header>
+        <figure>
+            <img src="images/logo.png" width="320" height="240" alt="Little Lemon Logo">
+            <figcaption>Little Lemon Logo</figcaption>
+        </figure>
+    </header>
+    <nav>
+        <ul class="links">
+            <li><a href="#hero">Home</a></li>
+            <li><a href="#location">Location</a></li>
+            <li><a href="#booking">Booking</a></li>
+            <li><a href="#menu">Menu</a></li>
+            <li><a href="#about">About</a></li>
+        </ul>
+    </nav>
+    <main>
+        <section id="hero">
+            <h1>Little Lemon</h1>
+            <p>Chicago</p>
+            <p>We are a family-owned Mediterranean restaurant, focused on traditional recipes served with a modern twist</p>
+            <a href="#booking">Reserve a Table</a>
+        </section>
+        <section id="location">
+            <h2>Our Locations</h2>
+            <p>Midtown  -- 123 Main street</p>
+            <p>Downtown -- 456 Restaurant Row</p>
+            <h3>Opening Hours</h3>
+            <p>Mon - Fri: 11:00 AM - 10:00 PM</p>
+            <p>Sat - Sun: 10:00 AM - 11:00 PM</p>
+        </section>
+        <section id="booking">
+            <h2>Book A Table</h2>
+            <form method="POST">
+                <fieldset id="size">
+                    <label>
+                        <input type="radio" value="2" name="size">2-person table
+                    </label>
+                    <label>
+                        <input type="radio" value="4" name="size" checked>4-person table
+                    </label>
+                    <label>
+                        <input type="radio" value="6" name="size">6-person table
+                    </label>
+                </fieldset>
+                <fieldset id="location-choice">
+                    <label>
+                        <input type="radio" value="indoors" name="location" checked>Indoors
+                    </label>
+                    <label>
+                        <input type="radio" value="outdoors" name="location">Outdoors
+                    </label>
+                </fieldset>
+                <fieldset id="bookingDate">
+                    <div>
+                        <label for="booking_date">Booking Date</label>
+                        <input type="date" id="booking_date" name="booking_date">
+                    </div>
+                    <div>
+                        <label for="booking_time">Booking Time</label>
+                        <input type="time" id="booking_time" name="booking_time" min="11:00" max="22:00">
+                    </div>
+                    <div>
+                        <label for="booking_people">Number of people</label>
+                        <input type="range" id="booking_people" min="1" max="10" value="4" oninput="this.nextElementSibling.value=this.value">
+                        <output>4</output>
+                    </div>
+                    <div>
+                        <label for="booking_location">Booking Location</label>
+                        <input id="booking_location" name="booking_location" list="locations">
+                        <datalist id="locations">
+                            <option value="Downtown"></option>
+                            <option value="midtown"></option>
+                        </datalist>
+                    </div>
+                </fieldset>
+                <button type="submit">Book table</button>
+            </form>
+        </section>
+        <section id="menu">
+            <h2>Our Menu</h2>
+            <article class="dish special">
+                <h3>Dish of the Week - 20% OFF</h3>
+                <p>Grilled lamb kofta served with herbed yogurt and warm pita.</p>
+                <p class="price">$12.99</p>
+            </article>
+            <article class="dish">
+                <h3>Greek Salad</h3>
+                <p>Crisp tomatoes, cucumber, olives, and feta with olive oil.</p>
+                <p class="price">$10.99</p>
+            </article>
+            <article class="dish">
+                <h3>Bruschetta</h3>
+                <p>Grilled bread topped with fresh tomato, basil, and garlic.</p>
+                <p class="price">$8.99</p>
+            </article>
+            <article class="dish">
+                <h3>Seafood Pasta</h3>
+                <p>Shrimp and mussels tossed in a garlic white wine sauce.</p>
+                <p class="price">$15.99</p>
+            </article>
+        </section>
+        <section id="about">
+            <h2>About Us</h2>
+            <p>Based in Chicago, Illinois, Little Lemon is a family-owned Mediterranean restaurant, 
+                focused on traditional recipes served with a modern twist. The chefs draw inspiration from Italian, 
+                Greek, and Turkish culture and have a menu of 12-15 items that they rotate seasonally. 
+                The restaurant has a rustic and relaxed atmosphere with moderate prices, 
+                making it a popular place for a meal any time of the day.</p>
+            <p>Little Lemon is owned by two Italian brothers, Mario and Adrian,
+                 who moved to the United States to pursue their shared dream of owning a restaurant.
+                  To craft the menu, Mario relies on family recipes and his experience as a chef in Italy. 
+                  Adrian does all the marketing for the restaurant and led the effort 
+                  to expand the menu beyond classic Italian to incorporate additional cuisines from the Mediterranean region.</p>
+        </section>
+    </main>
+    <footer>
+        <p>Copyright Little Lemon by Yusuf Dirawi</p>
+    </footer>
+</body>
+</html>
